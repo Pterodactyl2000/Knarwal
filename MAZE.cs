@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Maze
 {
-    public partial class Form1 : Form
+    public partial class Maze : Form
     {
-        public Form1()
+        public Maze()
         {
             InitializeComponent();
         }
