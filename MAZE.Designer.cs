@@ -48,6 +48,7 @@
             this.wall16 = new System.Windows.Forms.PictureBox();
             this.wall17 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.narwhal = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.wall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall3)).BeginInit();
@@ -68,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.narwhal)).BeginInit();
             this.SuspendLayout();
             // 
             // wall
@@ -250,12 +252,22 @@
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
             // 
+            // narwhal
+            // 
+            this.narwhal.Location = new System.Drawing.Point(1, 2);
+            this.narwhal.Name = "narwhal";
+            this.narwhal.Size = new System.Drawing.Size(33, 32);
+            this.narwhal.TabIndex = 20;
+            this.narwhal.TabStop = false;
+            this.narwhal.Click += new System.EventHandler(this.narwhal_Click);
+            // 
             // Maze
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.narwhal);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.wall17);
             this.Controls.Add(this.wall16);
@@ -279,6 +291,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Maze";
             this.Text = "Maze";
+            this.Load += new System.EventHandler(this.Maze_Load);
             ((System.ComponentModel.ISupportInitialize)(this.wall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall3)).EndInit();
@@ -299,6 +312,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.narwhal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,6 +339,7 @@
         private System.Windows.Forms.PictureBox wall16;
         private System.Windows.Forms.PictureBox wall17;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox narwhal;
     }
 }
 
