@@ -21,10 +21,27 @@ namespace Maze
         {
 
         }
+       
 
-        private void narwhal_Click(object sender, EventArgs e)
+        public void swim(object sender, KeyEventArgs e)
         {
-
+            
+            switch (e.KeyCode)
+            {
+                case Keys.Left:
+                    Narwhal.Left -= 5;
+                    
+                    break;
+                case Keys.Right:
+                    Narwhal.Left += 5;
+                    break;
+                case Keys.Up:
+                    Narwhal.Top -= 5;
+                    break;
+                case Keys.Down:
+                    Narwhal.Top += 5;
+                    break;
+            }
         }
     }
 }

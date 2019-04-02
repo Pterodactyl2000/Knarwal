@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Maze));
             this.wall = new System.Windows.Forms.PictureBox();
             this.wall2 = new System.Windows.Forms.PictureBox();
             this.wall3 = new System.Windows.Forms.PictureBox();
@@ -41,14 +42,14 @@
             this.wall11 = new System.Windows.Forms.PictureBox();
             this.wall12 = new System.Windows.Forms.PictureBox();
             this.wall13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.wall20 = new System.Windows.Forms.PictureBox();
             this.display = new System.Windows.Forms.PictureBox();
             this.wall14 = new System.Windows.Forms.PictureBox();
             this.wall15 = new System.Windows.Forms.PictureBox();
             this.wall16 = new System.Windows.Forms.PictureBox();
             this.wall17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.narwhal = new System.Windows.Forms.PictureBox();
+            this.wall100 = new System.Windows.Forms.PictureBox();
+            this.Narwhal = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.wall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall3)).BeginInit();
@@ -62,14 +63,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.wall11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.display)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.narwhal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall100)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Narwhal)).BeginInit();
             this.SuspendLayout();
             // 
             // wall
@@ -189,14 +190,14 @@
             this.wall13.TabIndex = 12;
             this.wall13.TabStop = false;
             // 
-            // pictureBox1
+            // wall20
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Maroon;
-            this.pictureBox1.Location = new System.Drawing.Point(240, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(390, 21);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.wall20.BackColor = System.Drawing.Color.Maroon;
+            this.wall20.Location = new System.Drawing.Point(240, 0);
+            this.wall20.Name = "wall20";
+            this.wall20.Size = new System.Drawing.Size(390, 21);
+            this.wall20.TabIndex = 13;
+            this.wall20.TabStop = false;
             // 
             // display
             // 
@@ -243,23 +244,24 @@
             this.wall17.TabIndex = 18;
             this.wall17.TabStop = false;
             // 
-            // pictureBox2
+            // wall100
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Maroon;
-            this.pictureBox2.Location = new System.Drawing.Point(569, 61);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 389);
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
+            this.wall100.BackColor = System.Drawing.Color.Maroon;
+            this.wall100.Location = new System.Drawing.Point(569, 61);
+            this.wall100.Name = "wall100";
+            this.wall100.Size = new System.Drawing.Size(26, 389);
+            this.wall100.TabIndex = 19;
+            this.wall100.TabStop = false;
             // 
-            // narwhal
+            // Narwhal
             // 
-            this.narwhal.Location = new System.Drawing.Point(1, 2);
-            this.narwhal.Name = "narwhal";
-            this.narwhal.Size = new System.Drawing.Size(33, 32);
-            this.narwhal.TabIndex = 20;
-            this.narwhal.TabStop = false;
-            this.narwhal.Click += new System.EventHandler(this.narwhal_Click);
+            this.Narwhal.Image = ((System.Drawing.Image)(resources.GetObject("Narwhal.Image")));
+            this.Narwhal.Location = new System.Drawing.Point(2, 2);
+            this.Narwhal.Name = "Narwhal";
+            this.Narwhal.Size = new System.Drawing.Size(44, 32);
+            this.Narwhal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Narwhal.TabIndex = 20;
+            this.Narwhal.TabStop = false;
             // 
             // Maze
             // 
@@ -267,14 +269,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.narwhal);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.Narwhal);
+            this.Controls.Add(this.wall100);
             this.Controls.Add(this.wall17);
             this.Controls.Add(this.wall16);
             this.Controls.Add(this.wall15);
             this.Controls.Add(this.wall14);
             this.Controls.Add(this.display);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.wall20);
             this.Controls.Add(this.wall13);
             this.Controls.Add(this.wall12);
             this.Controls.Add(this.wall11);
@@ -292,6 +294,7 @@
             this.Name = "Maze";
             this.Text = "Maze";
             this.Load += new System.EventHandler(this.Maze_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.swim);
             ((System.ComponentModel.ISupportInitialize)(this.wall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall3)).EndInit();
@@ -305,14 +308,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.wall11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.display)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.narwhal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall100)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Narwhal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,14 +335,14 @@
         private System.Windows.Forms.PictureBox wall11;
         private System.Windows.Forms.PictureBox wall12;
         private System.Windows.Forms.PictureBox wall13;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox wall20;
         private System.Windows.Forms.PictureBox display;
         private System.Windows.Forms.PictureBox wall14;
         private System.Windows.Forms.PictureBox wall15;
         private System.Windows.Forms.PictureBox wall16;
         private System.Windows.Forms.PictureBox wall17;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox narwhal;
+        private System.Windows.Forms.PictureBox wall100;
+        private System.Windows.Forms.PictureBox Narwhal;
     }
 }
 

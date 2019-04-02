@@ -1,6 +1,7 @@
 ﻿namespace Maze
 {
-    internal class gogogo
+    internal class playerinput
     {
+
     }
 }
