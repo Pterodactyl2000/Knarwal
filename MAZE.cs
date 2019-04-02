@@ -30,16 +30,19 @@ namespace Maze
             {
                 case Keys.Left:
                     Narwhal.Left -= 5;
-                    
+                    Narwhal.Image = Image.FromFile("C:/Users/MSSA/Source/Repos/Maze/Properties/Narwhal2.gif");
                     break;
                 case Keys.Right:
-                    Narwhal.Left += 5;
+                    Narwhal.Left += 5;                  
+                    Narwhal.Image = Image.FromFile("C:/Users/MSSA/Source/Repos/Maze/Properties/Narwhal.gif");
                     break;
                 case Keys.Up:
                     Narwhal.Top -= 5;
+                    Narwhal.Image = Image.FromFile("C:/Users/MSSA/Source/Repos/Maze/Properties/Narwhal3.gif");
                     break;
                 case Keys.Down:
                     Narwhal.Top += 5;
+                    Narwhal.Image = Image.FromFile("C:/Users/MSSA/Source/Repos/Maze/Properties/Narwhal4.gif");
                     break;
             }
         }
