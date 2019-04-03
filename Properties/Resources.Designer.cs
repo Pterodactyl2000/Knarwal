@@ -63,6 +63,16 @@ namespace Maze.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Level_1 {
+            get {
+                object obj = ResourceManager.GetObject("Level 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Narwhal {
             get {
                 object obj = ResourceManager.GetObject("Narwhal", resourceCulture);

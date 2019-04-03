@@ -52,10 +52,8 @@
     <Compile Include="MAZE.Designer.cs">
       <DependentUpon>MAZE.cs</DependentUpon>
     </Compile>
-    <Compile Include="playerinput.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="wall.cs" />
     <EmbeddedResource Include="MAZE.resx">
       <DependentUpon>MAZE.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +94,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Narwhal.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Level 1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
