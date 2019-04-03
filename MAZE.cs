@@ -16,8 +16,8 @@ namespace Maze
         public Maze()
         {
             InitializeComponent();
-            //SoundPlayer soundplayer = new SoundPlayer();
-           // soundplayer.PlayLooping();
+            var soundplayer = new SoundPlayer("C:/Users/MSSA/source/repos/Maze/Properties/Narwals-song.wav");
+            soundplayer.PlayLooping();
         }
 
         private void Maze_Load(object sender, EventArgs e)
