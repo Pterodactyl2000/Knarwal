@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,8 +17,14 @@ namespace Maze
         public Maze()
         {
             InitializeComponent();
-            var soundplayer = new SoundPlayer("C:/Users/MSSA/source/repos/Maze/Properties/Narwals-song.wav");
-            soundplayer.PlayLooping();
+
+            var pic = Properties.Resources.Narwhal2;
+
+
+            using (var soundplayer = new SoundPlayer(Properties.Resources.Narwals_song))
+            {
+                soundplayer.PlayLooping();
+            }
         }
 
         private void Maze_Load(object sender, EventArgs e)
@@ -28,29 +35,33 @@ namespace Maze
 
         public void swim(object sender, KeyEventArgs e)
         {
-
+            Image currentNarwhalImage = Narwhal.Image;
 
             switch (e.KeyCode)
             {
                 case Keys.Left:
                     collision();
                     Narwhal.Left -= 5;
-                    Narwhal.Image = Image.FromFile("C:/Users/MSSA/Source/Repos/Maze/Properties/Narwhal2.gif");
+                    currentNarwhalImage = Properties.Resources.Narwhal2;
+                    Narwhal.Image = currentNarwhalImage;
                     break;
                 case Keys.Right:
                     collision();
                     Narwhal.Left += 5;
-                    Narwhal.Image = Image.FromFile("C:/Users/MSSA/Source/Repos/Maze/Properties/Narwhal.gif");
+                    currentNarwhalImage = Properties.Resources.Narwhal;
+                    Narwhal.Image = currentNarwhalImage;
                     break;
                 case Keys.Up:
                     collision();
                     Narwhal.Top -= 5;
-                    Narwhal.Image = Image.FromFile("C:/Users/MSSA/Source/Repos/Maze/Properties/Narwhal3.gif");
+                    currentNarwhalImage = Properties.Resources.Narwhal3;
+                    Narwhal.Image = currentNarwhalImage;
                     break;
                 case Keys.Down:
                     collision();
                     Narwhal.Top += 5;
-                    Narwhal.Image = Image.FromFile("C:/Users/MSSA/Source/Repos/Maze/Properties/Narwhal4.gif");
+                    currentNarwhalImage = Properties.Resources.Narwhal4;
+                    Narwhal.Image = currentNarwhalImage;
                     break;
             }
 
