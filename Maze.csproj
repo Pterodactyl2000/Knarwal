@@ -81,22 +81,40 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Narwhal1.gif" />
+    <EmbeddedResource Include="Properties\Narwhal1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Narwhal2.gif" />
+    <EmbeddedResource Include="Properties\Narwhal2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Narwhal3.gif" />
+    <EmbeddedResource Include="Properties\Narwhal3.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Narwhal4.gif" />
+    <EmbeddedResource Include="Properties\Narwhal4.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Narwhal.gif" />
+    <EmbeddedResource Include="Properties\Narwhal.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Level 1.png" />
+    <EmbeddedResource Include="Properties\Level 1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NarwalWav.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Narwals-song.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

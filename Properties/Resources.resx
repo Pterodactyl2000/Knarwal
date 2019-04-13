@@ -133,7 +133,10 @@
   <data name="Narwhal2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Narwhal2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Level 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Level1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Level 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Narwals_song" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>narwals-song.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
