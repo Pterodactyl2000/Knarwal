@@ -21,10 +21,10 @@ namespace Maze
             var pic = Properties.Resources.Narwhal2;
 
 
-            using (var soundplayer = new SoundPlayer(Properties.Resources.Narwals_song))
-            {
-                soundplayer.PlayLooping();
-            }
+          //  using (var soundplayer = new SoundPlayer(Properties.Resources.Narwals_song))
+           // {
+            //    soundplayer.PlayLooping();
+           // }
         }
 
         private void Maze_Load(object sender, EventArgs e)
@@ -70,40 +70,35 @@ namespace Maze
 
                 if ((wall1.Bounds).IntersectsWith(Narwhal.Bounds))
                 {
-                    Narwhal.Left = 0;
-                    Narwhal.Top = 0;
-                    MessageBox.Show("Oh No!  You crashed, try again.");
+                    crash();
                 }
                 else if((Wall2.Bounds).IntersectsWith(Narwhal.Bounds))
                 {
-                    Narwhal.Left = 0;
-                    Narwhal.Top = 0;
-                    MessageBox.Show("Oh No!  You crashed, try again.");
+                    crash();
                 }
                 else if ((wall3.Bounds).IntersectsWith(Narwhal.Bounds))
                 {
-                    Narwhal.Left = 0;
-                    Narwhal.Top = 0;
-                    MessageBox.Show("Oh No!  You crashed, try again.");
+                    crash();
                 }
                 else if((Wall4.Bounds).IntersectsWith(Narwhal.Bounds))
                 {
-                    Narwhal.Left = 0;
-                    Narwhal.Top = 0;
-                    MessageBox.Show("Oh No!  You crashed, try again.");
+                   crash();
                 }
                 else if((wall5.Bounds).IntersectsWith(Narwhal.Bounds))
                 {
-                    Narwhal.Left = 0;
-                    Narwhal.Top = 0;
-                    MessageBox.Show("Oh No!  You crashed, try again.");
+                    crash();
                 }
 
 
 
 
             }
-
+            void crash()
+                {
+                 Narwhal.Left = 0;
+                    Narwhal.Top = 0;
+                    MessageBox.Show("Oh No!  You crashed, try again.");
+                }
             
            
         }
