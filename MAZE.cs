@@ -21,10 +21,10 @@ namespace Maze
             var pic = Properties.Resources.Narwhal2;
 
 
-          //  using (var soundplayer = new SoundPlayer(Properties.Resources.Narwals_song))
-           // {
-            //    soundplayer.PlayLooping();
-           // }
+            using (var soundplayer = new SoundPlayer(Properties.Resources.Narwals_song))
+            {
+                soundplayer.PlayLooping();
+            }
         }
 
         private void Maze_Load(object sender, EventArgs e)
@@ -95,14 +95,17 @@ namespace Maze
             }
             void crash()
                 {
-                 Narwhal.Left = 0;
-                    Narwhal.Top = 0;
+                 Narwhal.Left = 47;
+                    Narwhal.Top = 41;
                     MessageBox.Show("Oh No!  You crashed, try again.");
                 }
             
            
         }
-            
-        
+
+        private void Exitbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
