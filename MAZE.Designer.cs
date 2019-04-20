@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Maze));
             this.exitbutton = new System.Windows.Forms.Button();
             this.wall6 = new System.Windows.Forms.PictureBox();
             this.wall5 = new System.Windows.Forms.PictureBox();
@@ -41,6 +42,11 @@
             this.buttonup = new System.Windows.Forms.Button();
             this.buttondown = new System.Windows.Forms.Button();
             this.buttonright = new System.Windows.Forms.Button();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.wall7 = new System.Windows.Forms.PictureBox();
+            this.wall8 = new System.Windows.Forms.PictureBox();
+            this.wall9 = new System.Windows.Forms.PictureBox();
+            this.wall10 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.wall6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Wall4)).BeginInit();
@@ -49,6 +55,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.wall1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Narwhal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.display)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall10)).BeginInit();
             this.SuspendLayout();
             // 
             // exitbutton
@@ -166,6 +177,7 @@
             this.buttondown.Text = "6";
             this.buttondown.UseVisualStyleBackColor = true;
             this.buttondown.Click += new System.EventHandler(this.buttondown_Click);
+            this.buttondown.MouseCaptureChanged += new System.EventHandler(this.buttondown_Click);
             // 
             // buttonright
             // 
@@ -178,12 +190,64 @@
             this.buttonright.UseVisualStyleBackColor = true;
             this.buttonright.Click += new System.EventHandler(this.buttonright_Click);
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(854, 51);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(75, 23);
+            this.axWindowsMediaPlayer1.TabIndex = 32;
+            this.axWindowsMediaPlayer1.Visible = false;
+            this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
+            // 
+            // wall7
+            // 
+            this.wall7.BackColor = System.Drawing.Color.Maroon;
+            this.wall7.Location = new System.Drawing.Point(234, 127);
+            this.wall7.Name = "wall7";
+            this.wall7.Size = new System.Drawing.Size(368, 26);
+            this.wall7.TabIndex = 33;
+            this.wall7.TabStop = false;
+            // 
+            // wall8
+            // 
+            this.wall8.BackColor = System.Drawing.Color.Maroon;
+            this.wall8.Location = new System.Drawing.Point(576, 127);
+            this.wall8.Name = "wall8";
+            this.wall8.Size = new System.Drawing.Size(26, 262);
+            this.wall8.TabIndex = 34;
+            this.wall8.TabStop = false;
+            // 
+            // wall9
+            // 
+            this.wall9.BackColor = System.Drawing.Color.Maroon;
+            this.wall9.Location = new System.Drawing.Point(345, 241);
+            this.wall9.Name = "wall9";
+            this.wall9.Size = new System.Drawing.Size(26, 261);
+            this.wall9.TabIndex = 35;
+            this.wall9.TabStop = false;
+            // 
+            // wall10
+            // 
+            this.wall10.BackColor = System.Drawing.Color.Maroon;
+            this.wall10.Location = new System.Drawing.Point(462, 154);
+            this.wall10.Name = "wall10";
+            this.wall10.Size = new System.Drawing.Size(26, 235);
+            this.wall10.TabIndex = 36;
+            this.wall10.TabStop = false;
+            // 
             // Maze
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(986, 526);
+            this.Controls.Add(this.wall10);
+            this.Controls.Add(this.wall9);
+            this.Controls.Add(this.wall8);
+            this.Controls.Add(this.wall7);
+            this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.buttonright);
             this.Controls.Add(this.buttondown);
             this.Controls.Add(this.buttonup);
@@ -202,7 +266,6 @@
             this.Name = "Maze";
             this.Text = "Maze";
             this.Load += new System.EventHandler(this.Maze_Load);
-            
             ((System.ComponentModel.ISupportInitialize)(this.wall6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Wall4)).EndInit();
@@ -211,6 +274,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.wall1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Narwhal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.display)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,6 +297,11 @@
         private System.Windows.Forms.Button buttonup;
         private System.Windows.Forms.Button buttondown;
         private System.Windows.Forms.Button buttonright;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.PictureBox wall7;
+        private System.Windows.Forms.PictureBox wall8;
+        private System.Windows.Forms.PictureBox wall9;
+        private System.Windows.Forms.PictureBox wall10;
     }
 }
 

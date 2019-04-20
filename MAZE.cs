@@ -18,12 +18,7 @@ namespace Maze
         
         public Maze()
         {
-            InitializeComponent();
-
-//            SoundPlayer whal = new SoundPlayer(Properties.Resources.Narwals_song);
-  //          whal.Play();
-            
-         
+            InitializeComponent();        
         }
 
         private void Maze_Load(object sender, EventArgs e)
@@ -34,13 +29,12 @@ namespace Maze
             this.Close();
         }
 
-        Image currentNarwhalImage = Properties.Resources.Narwhal2;
 
         public void Buttonleft_Click(object sender, EventArgs e)
         {
             Collision();
             Narwhal.Left -= 5;
-            currentNarwhalImage = Properties.Resources.Narwhal2;
+            Narwhal.Image = Properties.Resources.Narwhal2;
             
         }
 
@@ -48,7 +42,7 @@ namespace Maze
         {
             Collision();
             Narwhal.Left += 5;
-            currentNarwhalImage = Properties.Resources.Narwhal1;
+            Narwhal.Image = Properties.Resources.Narwhal1;
         }
 
         public void buttonup_Click(object sender, EventArgs e)
@@ -56,14 +50,14 @@ namespace Maze
             
             Collision();
             Narwhal.Top -= 5;
-            currentNarwhalImage = Properties.Resources.Narwhal3;
+            Narwhal.Image = Properties.Resources.Narwhal3;
         }
 
         public void buttondown_Click(object sender, EventArgs e)
         {
             Collision();
             Narwhal.Top += 5;
-           currentNarwhalImage = Properties.Resources.Narwhal4;
+           Narwhal.Image = Properties.Resources.Narwhal4;
             
         }
     void Collision()
@@ -89,16 +83,43 @@ namespace Maze
         {
             crash();
         }
+            else if ((wall6.Bounds).IntersectsWith(Narwhal.Bounds))
+            {
+                crash();
+            }
+            else if ((wall7.Bounds).IntersectsWith(Narwhal.Bounds))
+            {
+                crash();
+            }
+            else if ((wall8.Bounds).IntersectsWith(Narwhal.Bounds))
+            {
+                crash();
+            }
+            else if ((wall9.Bounds).IntersectsWith(Narwhal.Bounds))
+            {
+                crash();
+            }
+            else if ((wall10.Bounds).IntersectsWith(Narwhal.Bounds))
+            {
+                crash();
+            }
 
 
 
 
-    }
+        }
         void crash()
         {
             Narwhal.Left = 47;
             Narwhal.Top = 41;
             MessageBox.Show("Oh No!  You crashed, try again.");
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.URL = @"Properties.Resources.Narwhal_Song";
+            axWindowsMediaPlayer1.settings.setMode("repeat", true);
+            
         }
     }
     
