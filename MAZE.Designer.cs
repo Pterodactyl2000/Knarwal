@@ -28,24 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.exitbutton = new System.Windows.Forms.Button();
+            this.wall6 = new System.Windows.Forms.PictureBox();
+            this.wall5 = new System.Windows.Forms.PictureBox();
+            this.Wall4 = new System.Windows.Forms.PictureBox();
+            this.wall3 = new System.Windows.Forms.PictureBox();
+            this.Wall2 = new System.Windows.Forms.PictureBox();
+            this.wall1 = new System.Windows.Forms.PictureBox();
             this.Narwhal = new System.Windows.Forms.PictureBox();
             this.display = new System.Windows.Forms.PictureBox();
-            this.wall1 = new System.Windows.Forms.PictureBox();
-            this.Wall2 = new System.Windows.Forms.PictureBox();
-            this.wall3 = new System.Windows.Forms.PictureBox();
-            this.Wall4 = new System.Windows.Forms.PictureBox();
-            this.wall5 = new System.Windows.Forms.PictureBox();
-            this.wall6 = new System.Windows.Forms.PictureBox();
-            this.exitbutton = new System.Windows.Forms.Button();
+            this.buttonleft = new System.Windows.Forms.Button();
+            this.buttonup = new System.Windows.Forms.Button();
+            this.buttondown = new System.Windows.Forms.Button();
+            this.buttonright = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.wall6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Wall4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Wall2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Narwhal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.display)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Wall2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Wall4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall6)).BeginInit();
             this.SuspendLayout();
+            // 
+            // exitbutton
+            // 
+            this.exitbutton.Location = new System.Drawing.Point(828, 416);
+            this.exitbutton.Name = "exitbutton";
+            this.exitbutton.Size = new System.Drawing.Size(75, 23);
+            this.exitbutton.TabIndex = 27;
+            this.exitbutton.Text = "Exit";
+            this.exitbutton.UseVisualStyleBackColor = true;
+            this.exitbutton.Click += new System.EventHandler(this.Exitbutton_Click);
+            // 
+            // wall6
+            // 
+            this.wall6.BackColor = System.Drawing.Color.Maroon;
+            this.wall6.Location = new System.Drawing.Point(0, 500);
+            this.wall6.Name = "wall6";
+            this.wall6.Size = new System.Drawing.Size(726, 26);
+            this.wall6.TabIndex = 26;
+            this.wall6.TabStop = false;
+            // 
+            // wall5
+            // 
+            this.wall5.BackColor = System.Drawing.Color.Maroon;
+            this.wall5.Location = new System.Drawing.Point(234, 127);
+            this.wall5.Name = "wall5";
+            this.wall5.Size = new System.Drawing.Size(26, 387);
+            this.wall5.TabIndex = 25;
+            this.wall5.TabStop = false;
+            // 
+            // Wall4
+            // 
+            this.Wall4.BackColor = System.Drawing.Color.Maroon;
+            this.Wall4.Location = new System.Drawing.Point(709, 0);
+            this.Wall4.Name = "Wall4";
+            this.Wall4.Size = new System.Drawing.Size(26, 526);
+            this.Wall4.TabIndex = 24;
+            this.Wall4.TabStop = false;
+            // 
+            // wall3
+            // 
+            this.wall3.BackColor = System.Drawing.Color.Maroon;
+            this.wall3.Location = new System.Drawing.Point(0, 0);
+            this.wall3.Name = "wall3";
+            this.wall3.Size = new System.Drawing.Size(726, 26);
+            this.wall3.TabIndex = 23;
+            this.wall3.TabStop = false;
+            // 
+            // Wall2
+            // 
+            this.Wall2.BackColor = System.Drawing.Color.Maroon;
+            this.Wall2.Location = new System.Drawing.Point(118, 12);
+            this.Wall2.Name = "Wall2";
+            this.Wall2.Size = new System.Drawing.Size(26, 399);
+            this.Wall2.TabIndex = 22;
+            this.Wall2.TabStop = false;
+            // 
+            // wall1
+            // 
+            this.wall1.BackColor = System.Drawing.Color.Maroon;
+            this.wall1.Location = new System.Drawing.Point(0, 0);
+            this.wall1.Name = "wall1";
+            this.wall1.Size = new System.Drawing.Size(26, 526);
+            this.wall1.TabIndex = 21;
+            this.wall1.TabStop = false;
             // 
             // Narwhal
             // 
@@ -66,69 +134,49 @@
             this.display.TabIndex = 14;
             this.display.TabStop = false;
             // 
-            // wall1
+            // buttonleft
             // 
-            this.wall1.BackColor = System.Drawing.Color.Maroon;
-            this.wall1.Location = new System.Drawing.Point(0, 0);
-            this.wall1.Name = "wall1";
-            this.wall1.Size = new System.Drawing.Size(26, 526);
-            this.wall1.TabIndex = 21;
-            this.wall1.TabStop = false;
+            this.buttonleft.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.buttonleft.Location = new System.Drawing.Point(802, 270);
+            this.buttonleft.Name = "buttonleft";
+            this.buttonleft.Size = new System.Drawing.Size(44, 23);
+            this.buttonleft.TabIndex = 28;
+            this.buttonleft.Text = "3";
+            this.buttonleft.UseVisualStyleBackColor = true;
+            this.buttonleft.Click += new System.EventHandler(this.Buttonleft_Click);
             // 
-            // Wall2
+            // buttonup
             // 
-            this.Wall2.BackColor = System.Drawing.Color.Maroon;
-            this.Wall2.Location = new System.Drawing.Point(118, 12);
-            this.Wall2.Name = "Wall2";
-            this.Wall2.Size = new System.Drawing.Size(26, 399);
-            this.Wall2.TabIndex = 22;
-            this.Wall2.TabStop = false;
+            this.buttonup.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.buttonup.Location = new System.Drawing.Point(843, 241);
+            this.buttonup.Name = "buttonup";
+            this.buttonup.Size = new System.Drawing.Size(44, 23);
+            this.buttonup.TabIndex = 29;
+            this.buttonup.Text = "5";
+            this.buttonup.UseVisualStyleBackColor = true;
+            this.buttonup.Click += new System.EventHandler(this.buttonup_Click);
             // 
-            // wall3
+            // buttondown
             // 
-            this.wall3.BackColor = System.Drawing.Color.Maroon;
-            this.wall3.Location = new System.Drawing.Point(0, 0);
-            this.wall3.Name = "wall3";
-            this.wall3.Size = new System.Drawing.Size(726, 26);
-            this.wall3.TabIndex = 23;
-            this.wall3.TabStop = false;
+            this.buttondown.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.buttondown.Location = new System.Drawing.Point(843, 299);
+            this.buttondown.Name = "buttondown";
+            this.buttondown.Size = new System.Drawing.Size(44, 23);
+            this.buttondown.TabIndex = 30;
+            this.buttondown.Text = "6";
+            this.buttondown.UseVisualStyleBackColor = true;
+            this.buttondown.Click += new System.EventHandler(this.buttondown_Click);
             // 
-            // Wall4
+            // buttonright
             // 
-            this.Wall4.BackColor = System.Drawing.Color.Maroon;
-            this.Wall4.Location = new System.Drawing.Point(709, 0);
-            this.Wall4.Name = "Wall4";
-            this.Wall4.Size = new System.Drawing.Size(26, 526);
-            this.Wall4.TabIndex = 24;
-            this.Wall4.TabStop = false;
-            // 
-            // wall5
-            // 
-            this.wall5.BackColor = System.Drawing.Color.Maroon;
-            this.wall5.Location = new System.Drawing.Point(234, 127);
-            this.wall5.Name = "wall5";
-            this.wall5.Size = new System.Drawing.Size(26, 387);
-            this.wall5.TabIndex = 25;
-            this.wall5.TabStop = false;
-            // 
-            // wall6
-            // 
-            this.wall6.BackColor = System.Drawing.Color.Maroon;
-            this.wall6.Location = new System.Drawing.Point(0, 500);
-            this.wall6.Name = "wall6";
-            this.wall6.Size = new System.Drawing.Size(726, 26);
-            this.wall6.TabIndex = 26;
-            this.wall6.TabStop = false;
-            // 
-            // exitbutton
-            // 
-            this.exitbutton.Location = new System.Drawing.Point(828, 416);
-            this.exitbutton.Name = "exitbutton";
-            this.exitbutton.Size = new System.Drawing.Size(75, 23);
-            this.exitbutton.TabIndex = 27;
-            this.exitbutton.Text = "Exit";
-            this.exitbutton.UseVisualStyleBackColor = true;
-            this.exitbutton.Click += new System.EventHandler(this.Exitbutton_Click);
+            this.buttonright.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.buttonright.Location = new System.Drawing.Point(885, 270);
+            this.buttonright.Name = "buttonright";
+            this.buttonright.Size = new System.Drawing.Size(44, 23);
+            this.buttonright.TabIndex = 31;
+            this.buttonright.Text = "4";
+            this.buttonright.UseVisualStyleBackColor = true;
+            this.buttonright.Click += new System.EventHandler(this.buttonright_Click);
             // 
             // Maze
             // 
@@ -136,6 +184,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(986, 526);
+            this.Controls.Add(this.buttonright);
+            this.Controls.Add(this.buttondown);
+            this.Controls.Add(this.buttonup);
+            this.Controls.Add(this.buttonleft);
             this.Controls.Add(this.exitbutton);
             this.Controls.Add(this.wall6);
             this.Controls.Add(this.wall5);
@@ -150,15 +202,15 @@
             this.Name = "Maze";
             this.Text = "Maze";
             this.Load += new System.EventHandler(this.Maze_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.swim);
+            
+            ((System.ComponentModel.ISupportInitialize)(this.wall6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Wall4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Wall2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wall1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Narwhal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.display)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Wall2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Wall4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wall6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -173,6 +225,10 @@
         private System.Windows.Forms.PictureBox wall5;
         private System.Windows.Forms.PictureBox wall6;
         private System.Windows.Forms.Button exitbutton;
+        private System.Windows.Forms.Button buttonleft;
+        private System.Windows.Forms.Button buttonup;
+        private System.Windows.Forms.Button buttondown;
+        private System.Windows.Forms.Button buttonright;
     }
 }
 

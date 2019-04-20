@@ -63,6 +63,16 @@ namespace Maze.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Knarltitle {
+            get {
+                object obj = ResourceManager.GetObject("Knarltitle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Level1 {
             get {
                 object obj = ResourceManager.GetObject("Level1", resourceCulture);
@@ -125,6 +135,16 @@ namespace Maze.Properties {
         internal static System.Drawing.Bitmap Narwhal4 {
             get {
                 object obj = ResourceManager.GetObject("Narwhal4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Star {
+            get {
+                object obj = ResourceManager.GetObject("Star", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
