@@ -146,7 +146,6 @@
             // 
             // fish8
             // 
-            this.fish8.Image = global::Maze.Properties.Resources.FSH;
             this.fish8.Location = new System.Drawing.Point(47, 238);
             this.fish8.Name = "fish8";
             this.fish8.Size = new System.Drawing.Size(25, 26);
@@ -157,7 +156,7 @@
             // 
             // fish7
             // 
-            this.fish7.Image = global::Maze.Properties.Resources.FSH;
+            this.fish7.Image = global::Maze.Properties.Resources.hide;
             this.fish7.Location = new System.Drawing.Point(176, 63);
             this.fish7.Name = "fish7";
             this.fish7.Size = new System.Drawing.Size(25, 26);
@@ -167,7 +166,7 @@
             // 
             // fish5
             // 
-            this.fish5.Image = global::Maze.Properties.Resources.FSH;
+            this.fish5.Image = global::Maze.Properties.Resources.hide;
             this.fish5.Location = new System.Drawing.Point(635, 429);
             this.fish5.Name = "fish5";
             this.fish5.Size = new System.Drawing.Size(25, 26);
@@ -177,7 +176,7 @@
             // 
             // fish4
             // 
-            this.fish4.Image = global::Maze.Properties.Resources.FSH;
+            this.fish4.Image = global::Maze.Properties.Resources.hide;
             this.fish4.Location = new System.Drawing.Point(398, 187);
             this.fish4.Name = "fish4";
             this.fish4.Size = new System.Drawing.Size(25, 26);
@@ -188,7 +187,7 @@
             // 
             // fish6
             // 
-            this.fish6.Image = global::Maze.Properties.Resources.FSH;
+            this.fish6.Image = global::Maze.Properties.Resources.hide;
             this.fish6.Location = new System.Drawing.Point(635, 63);
             this.fish6.Name = "fish6";
             this.fish6.Size = new System.Drawing.Size(25, 26);
@@ -198,7 +197,7 @@
             // 
             // fish3
             // 
-            this.fish3.Image = global::Maze.Properties.Resources.FSH;
+            this.fish3.Image = global::Maze.Properties.Resources.hide;
             this.fish3.Location = new System.Drawing.Point(166, 449);
             this.fish3.Name = "fish3";
             this.fish3.Size = new System.Drawing.Size(25, 26);
@@ -208,7 +207,7 @@
             // 
             // fish2
             // 
-            this.fish2.Image = global::Maze.Properties.Resources.FSH;
+            this.fish2.Image = global::Maze.Properties.Resources.hide;
             this.fish2.Location = new System.Drawing.Point(293, 449);
             this.fish2.Name = "fish2";
             this.fish2.Size = new System.Drawing.Size(25, 26);
@@ -219,7 +218,7 @@
             // 
             // fish1
             // 
-            this.fish1.Image = global::Maze.Properties.Resources.FSH;
+            this.fish1.Image = global::Maze.Properties.Resources.hide;
             this.fish1.Location = new System.Drawing.Point(521, 170);
             this.fish1.Name = "fish1";
             this.fish1.Size = new System.Drawing.Size(25, 26);
