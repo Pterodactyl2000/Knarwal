@@ -133,43 +133,92 @@ namespace Maze
         {
             if ((Narwhal.Bounds).IntersectsWith(fish8.Bounds))
             {
-                fish8.Image = Properties.Resources.hide;
-                which();
+                if (fish8.Image == Properties.Resources.hide)
+                {
+                    fish8.Image = Properties.Resources.hide;
+                }
+                else if (fish8.Image == Properties.Resources.FSH)
+                        {
+                    which();
+                        }
             }
             else if((Narwhal.Bounds).IntersectsWith(fish7.Bounds))
             {
-                fish7.Image = Properties.Resources.hide;
-                which();
+                if (fish7.Image == Properties.Resources.hide)
+                {
+                    fish7.Image = Properties.Resources.hide;
+                }
+                else if (fish7.Image == Properties.Resources.FSH)
+                {
+                    which();
+                }
+                
             }
             else if ((Narwhal.Bounds).IntersectsWith(fish6.Bounds))
             {
-                fish6.Image = Properties.Resources.hide;
-                which();
+                if (fish6.Image == Properties.Resources.hide)
+                {
+                    fish6.Image = Properties.Resources.hide;
+                }
+                else if (fish6.Image == Properties.Resources.FSH)
+                {
+                    which();
+                }
             }
             else if ((Narwhal.Bounds).IntersectsWith(fish5.Bounds))
             {
-                fish5.Image = Properties.Resources.hide;
-                which();
+                if (fish5.Image == Properties.Resources.hide)
+                {
+                    fish5.Image = Properties.Resources.hide;
+                }
+                else if (fish5.Image == Properties.Resources.FSH)
+                {
+                    which();
+                }
             }
             else if ((Narwhal.Bounds).IntersectsWith(fish4.Bounds))
             {
-                fish4.Image = Properties.Resources.hide;
-                which();
+                if (fish4.Image == Properties.Resources.hide)
+                {
+                    fish4.Image = Properties.Resources.hide;
+                }
+                else if (fish4.Image == Properties.Resources.FSH)
+                {
+                    which();
+                }
             }
             else if ((Narwhal.Bounds).IntersectsWith(fish3.Bounds))
             {
-                fish3.Image = Properties.Resources.hide;
-                which();
+                if (fish3.Image == Properties.Resources.hide)
+                {
+                    fish3.Image = Properties.Resources.hide;
+                }
+                else if (fish3.Image == Properties.Resources.FSH)
+                {
+                    which();
+                }
             }
             else if ((Narwhal.Bounds).IntersectsWith(fish2.Bounds))
             {
-                fish2.Image = Properties.Resources.hide;
-                which();
+                if (fish2.Image == Properties.Resources.hide)
+                {
+                    fish2.Image = Properties.Resources.hide;
+                }
+                else if (fish2.Image == Properties.Resources.FSH)
+                {
+                    which();
+                }
             }
             else if ((Narwhal.Bounds).IntersectsWith(fish1.Bounds))
             {
-                fish1.Image = Properties.Resources.hide;
-                which();
+                if (fish1.Image == Properties.Resources.hide)
+                {
+                    fish1.Image = Properties.Resources.hide;
+                }
+                else if (fish1.Image == Properties.Resources.FSH)
+                {
+                    which();
+                }
             }
         }
     public void fish4_Click(object sender, EventArgs e)
