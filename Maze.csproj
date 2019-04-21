@@ -153,6 +153,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Knarltitle.png" />
+    <None Include="Properties\FSH.gif" />
+    <None Include="Properties\hide.png" />
     <Content Include="Properties\Narwals-song.wav" />
     <None Include="Properties\Star.bmp" />
   </ItemGroup>
