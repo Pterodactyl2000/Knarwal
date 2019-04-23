@@ -15,335 +15,181 @@ namespace Maze
 {
     public partial class Maze : Form
     {
+        int scorecard = 0000;
+        int lives = 3;
+
 
         public Maze()
         {
             InitializeComponent();
-            
+
         }
+
+
 
         public void Maze_Load(object sender, EventArgs e)
         {
-            which();
+            scorelabel.Text = scorecard.ToString();
+            lifecount.Text = lives.ToString();
         }
-
-        public void Exitbutton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-
-        public void Buttonleft_Click(object sender, EventArgs e)
-        {
-            Collision();
-            Narwhal.Left -= 5;
-            Narwhal.Image = Properties.Resources.Narwhal2;
-            eat();
-
-        }
-
-        public void buttonright_Click(object sender, EventArgs e)
-        {
-            Collision();
-            Narwhal.Left += 5;
-            Narwhal.Image = Properties.Resources.Narwhal1;
-            eat();
-        }
-
-        public void buttonup_Click(object sender, EventArgs e)
-        {
-
-            Collision();
-            Narwhal.Top -= 5;
-            Narwhal.Image = Properties.Resources.Narwhal3;
-            eat();
-        }
-
-        public void buttondown_Click(object sender, EventArgs e)
-        {
-            Collision();
-            Narwhal.Top += 5;
-            Narwhal.Image = Properties.Resources.Narwhal4;
-            eat();
-
-        }
-        void Collision()
-        {
-
-            if ((wall1.Bounds).IntersectsWith(Narwhal.Bounds))
+            public void Exitbutton_Click(object sender, EventArgs e)
             {
-                crash();
-            }
-            else if ((Wall2.Bounds).IntersectsWith(Narwhal.Bounds))
-            {
-                crash();
-            }
-            else if ((wall3.Bounds).IntersectsWith(Narwhal.Bounds))
-            {
-                crash();
-            }
-            else if ((Wall4.Bounds).IntersectsWith(Narwhal.Bounds))
-            {
-                crash();
-            }
-            else if ((wall5.Bounds).IntersectsWith(Narwhal.Bounds))
-            {
-                crash();
-            }
-            else if ((wall6.Bounds).IntersectsWith(Narwhal.Bounds))
-            {
-                crash();
-            }
-            else if ((wall7.Bounds).IntersectsWith(Narwhal.Bounds))
-            {
-                crash();
-            }
-            else if ((wall8.Bounds).IntersectsWith(Narwhal.Bounds))
-            {
-                crash();
-            }
-            else if ((wall9.Bounds).IntersectsWith(Narwhal.Bounds))
-            {
-                crash();
-            }
-            else if ((wall10.Bounds).IntersectsWith(Narwhal.Bounds))
-            {
-                crash();
+                this.Close();
             }
 
 
-
-
-        }
-        void crash()
-        {
-            Narwhal.Left = 47;
-            Narwhal.Top = 41;
-            MessageBox.Show("Oh No!  You crashed, try again.");
-        }
-
-        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
-        {
-            axWindowsMediaPlayer1.URL = @"Properties.Resources.Narwhal_Song";
-
-
-        }
-        
-        void eat()
-        {
-            if ((Narwhal.Bounds).IntersectsWith(fish8.Bounds))
+            public void Buttonleft_Click(object sender, EventArgs e)
             {
-                if (fish8.Image == Properties.Resources.hide)
+                Collision();
+
+                Narwhal.Left -= 5;
+                Narwhal.Image = Properties.Resources.Narwhal2;
+
+
+            }
+
+            public void buttonright_Click(object sender, EventArgs e)
+            {
+                Collision();
+
+                Narwhal.Left += 5;
+                Narwhal.Image = Properties.Resources.Narwhal1;
+
+            }
+
+            public void buttonup_Click(object sender, EventArgs e)
+            {
+
+                Collision();
+
+                Narwhal.Top -= 5;
+                Narwhal.Image = Properties.Resources.Narwhal3;
+
+            }
+
+            public void buttondown_Click(object sender, EventArgs e)
+            {
+                Collision();
+
+                Narwhal.Top += 5;
+                Narwhal.Image = Properties.Resources.Narwhal4;
+
+
+            }
+            void Collision()
+            {
+
+                if ((wall1.Bounds).IntersectsWith(Narwhal.Bounds))
                 {
-                    fish8.Image = Properties.Resources.hide;
+                    crash();
                 }
-                else if (fish8.Image == Properties.Resources.FSH)
-                        {
-                    which();
-                        }
+                else if ((Wall2.Bounds).IntersectsWith(Narwhal.Bounds))
+                {
+                    crash();
+                }
+                else if ((wall3.Bounds).IntersectsWith(Narwhal.Bounds))
+                {
+                    crash();
+                }
+                else if ((Wall4.Bounds).IntersectsWith(Narwhal.Bounds))
+                {
+                    crash();
+                }
+                else if ((wall5.Bounds).IntersectsWith(Narwhal.Bounds))
+                {
+                    crash();
+                }
+                else if ((wall6.Bounds).IntersectsWith(Narwhal.Bounds))
+                {
+                    crash();
+                }
+                else if ((wall7.Bounds).IntersectsWith(Narwhal.Bounds))
+                {
+                    crash();
+                }
+                else if ((wall8.Bounds).IntersectsWith(Narwhal.Bounds))
+                {
+                    crash();
+                }
+                else if ((wall9.Bounds).IntersectsWith(Narwhal.Bounds))
+                {
+                    crash();
+                }
+                else if ((wall10.Bounds).IntersectsWith(Narwhal.Bounds))
+                {
+                    crash();
+                }
+
+
+
+
             }
-            else if((Narwhal.Bounds).IntersectsWith(fish7.Bounds))
+            void crash()
             {
-                if (fish7.Image == Properties.Resources.hide)
-                {
-                    fish7.Image = Properties.Resources.hide;
-                }
-                else if (fish7.Image == Properties.Resources.FSH)
-                {
-                    which();
-                }
+                Narwhal.Left = 47;
+                Narwhal.Top = 41;
+                lives = lives - 1;
+            lifecount.Text = lives.ToString();
+            if (lives > 0)
+
+                MessageBox.Show("Oh No!  You died!");
+            else if(lives == 0)
+                    {
+                
+                MessageBox.Show("GAME OVER");
+                this.Close();
+                Title x = new Title();
+                x.ShowDialog();
+
                 
             }
-            else if ((Narwhal.Bounds).IntersectsWith(fish6.Bounds))
-            {
-                if (fish6.Image == Properties.Resources.hide)
-                {
-                    fish6.Image = Properties.Resources.hide;
-                }
-                else if (fish6.Image == Properties.Resources.FSH)
-                {
-                    which();
-                }
+                  
+                
             }
-            else if ((Narwhal.Bounds).IntersectsWith(fish5.Bounds))
-            {
-                if (fish5.Image == Properties.Resources.hide)
-                {
-                    fish5.Image = Properties.Resources.hide;
-                }
-                else if (fish5.Image == Properties.Resources.FSH)
-                {
-                    which();
-                }
-            }
-            else if ((Narwhal.Bounds).IntersectsWith(fish4.Bounds))
-            {
-                if (fish4.Image == Properties.Resources.hide)
-                {
-                    fish4.Image = Properties.Resources.hide;
-                }
-                else if (fish4.Image == Properties.Resources.FSH)
-                {
-                    which();
-                }
-            }
-            else if ((Narwhal.Bounds).IntersectsWith(fish3.Bounds))
-            {
-                if (fish3.Image == Properties.Resources.hide)
-                {
-                    fish3.Image = Properties.Resources.hide;
-                }
-                else if (fish3.Image == Properties.Resources.FSH)
-                {
-                    which();
-                }
-            }
-            else if ((Narwhal.Bounds).IntersectsWith(fish2.Bounds))
-            {
-                if (fish2.Image == Properties.Resources.hide)
-                {
-                    fish2.Image = Properties.Resources.hide;
-                }
-                else if (fish2.Image == Properties.Resources.FSH)
-                {
-                    which();
-                }
-            }
-            else if ((Narwhal.Bounds).IntersectsWith(fish1.Bounds))
-            {
-                if (fish1.Image == Properties.Resources.hide)
-                {
-                    fish1.Image = Properties.Resources.hide;
-                }
-                else if (fish1.Image == Properties.Resources.FSH)
-                {
-                    which();
-                }
-            }
-        }
-    public void fish4_Click(object sender, EventArgs e)
-        {
-            
-        }
 
-        public void fish2_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        public void fish8_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-         void which()
-        {
-            
-            int e;
-            Random thing = new Random();
-            e = thing.Next(8);
-
-            switch(e)
+            private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
             {
-                case 0:
-                    {
-                        fish1.Image = Properties.Resources.FSH;
-                        fish2.Image = Properties.Resources.hide;
-                        fish3.Image = Properties.Resources.hide;
-                        fish4.Image = Properties.Resources.hide;
-                        fish5.Image = Properties.Resources.hide;
-                        fish6.Image = Properties.Resources.hide;
-                        fish7.Image = Properties.Resources.hide;
-                        fish8.Image = Properties.Resources.hide;
-                        break;
-                    }
-                case 1:
-                    {
-                        fish1.Image = Properties.Resources.hide;
-                        fish2.Image = Properties.Resources.FSH;
-                        fish3.Image = Properties.Resources.hide;
-                        fish4.Image = Properties.Resources.hide;
-                        fish5.Image = Properties.Resources.hide;
-                        fish6.Image = Properties.Resources.hide;
-                        fish7.Image = Properties.Resources.hide;
-                        fish8.Image = Properties.Resources.hide;
-                        break;
-                    }
-                case 2:
-                    {
-                        fish1.Image = Properties.Resources.hide;
-                        fish2.Image = Properties.Resources.hide;
-                        fish3.Image = Properties.Resources.FSH;
-                        fish4.Image = Properties.Resources.hide;
-                        fish5.Image = Properties.Resources.hide;
-                        fish6.Image = Properties.Resources.hide;
-                        fish7.Image = Properties.Resources.hide;
-                        fish8.Image = Properties.Resources.hide;
-                        break;
-                    }
-                case 3:
-                    {
-                        fish1.Image = Properties.Resources.hide;
-                        fish2.Image = Properties.Resources.hide;
-                        fish3.Image = Properties.Resources.hide;
-                        fish4.Image = Properties.Resources.FSH;
-                        fish5.Image = Properties.Resources.hide;
-                        fish6.Image = Properties.Resources.hide;
-                        fish7.Image = Properties.Resources.hide;
-                        fish8.Image = Properties.Resources.hide;
-                        break;
-                    }
-                case 4:
-                    {
-                        fish1.Image = Properties.Resources.hide;
-                        fish2.Image = Properties.Resources.hide;
-                        fish3.Image = Properties.Resources.hide;
-                        fish4.Image = Properties.Resources.hide;
-                        fish5.Image = Properties.Resources.FSH;
-                        fish6.Image = Properties.Resources.hide;
-                        fish7.Image = Properties.Resources.hide;
-                        fish8.Image = Properties.Resources.hide;
-                        break;
-                    }
-                case 5:
-                    {
-                        fish1.Image = Properties.Resources.hide;
-                        fish2.Image = Properties.Resources.hide;
-                        fish3.Image = Properties.Resources.hide;
-                        fish4.Image = Properties.Resources.hide;
-                        fish5.Image = Properties.Resources.hide;
-                        fish6.Image = Properties.Resources.FSH;
-                        fish7.Image = Properties.Resources.hide;
-                        fish8.Image = Properties.Resources.hide;
-                        break;
-                    }
-                case 6:
-                    {
-                        fish1.Image = Properties.Resources.hide;
-                        fish2.Image = Properties.Resources.hide;
-                        fish3.Image = Properties.Resources.hide;
-                        fish4.Image = Properties.Resources.hide;
-                        fish5.Image = Properties.Resources.hide;
-                        fish6.Image = Properties.Resources.hide;
-                        fish7.Image = Properties.Resources.FSH;
-                        fish8.Image = Properties.Resources.hide;
-                        break;
-                    }
-                case 7:
-                    {
-                        fish1.Image = Properties.Resources.hide;
-                        fish2.Image = Properties.Resources.hide;
-                        fish3.Image = Properties.Resources.hide;
-                        fish4.Image = Properties.Resources.hide;
-                        fish5.Image = Properties.Resources.hide;
-                        fish6.Image = Properties.Resources.hide;
-                        fish7.Image = Properties.Resources.hide;
-                        fish8.Image = Properties.Resources.FSH;
-                        break;
-                    }
+                axWindowsMediaPlayer1.URL = @"Properties.Resources.Narwhal_Song";
+
+
+            }
+
+
+            public void fish4_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            public void fish2_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            public void fish8_Click(object sender, EventArgs e)
+            {
+
+            }
+
+
+
+
+
+
+
+
+
+
+            public void scorelabel_Click(object sender, EventArgs e)
+            {
+                scorelabel.Text = scorecard.ToString();
+            }
+
+            public void lifecount_Click(object sender, EventArgs e)
+            {
+                lifecount.Text = lives.ToString();
             }
         }
     }
-}
+
 
 

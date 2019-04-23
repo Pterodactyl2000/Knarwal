@@ -35,5 +35,10 @@ namespace Maze
             this.Close();
 
         }
+
+        private void buttonclosetop_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -34,7 +34,6 @@
             this.buttonup = new System.Windows.Forms.Button();
             this.buttondown = new System.Windows.Forms.Button();
             this.buttonright = new System.Windows.Forms.Button();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.fish8 = new System.Windows.Forms.PictureBox();
             this.fish7 = new System.Windows.Forms.PictureBox();
             this.fish5 = new System.Windows.Forms.PictureBox();
@@ -54,8 +53,12 @@
             this.Wall2 = new System.Windows.Forms.PictureBox();
             this.wall1 = new System.Windows.Forms.PictureBox();
             this.Narwhal = new System.Windows.Forms.PictureBox();
-            this.display = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            this.score = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.scorelabel = new System.Windows.Forms.Label();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lifecount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fish8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fish7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fish5)).BeginInit();
@@ -75,7 +78,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Wall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Narwhal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.display)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.score)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // exitbutton
@@ -132,17 +136,6 @@
             this.buttonright.Text = "4";
             this.buttonright.UseVisualStyleBackColor = true;
             this.buttonright.Click += new System.EventHandler(this.buttonright_Click);
-            // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(854, 51);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(75, 23);
-            this.axWindowsMediaPlayer1.TabIndex = 32;
-            this.axWindowsMediaPlayer1.Visible = false;
-            this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
             // 
             // fish8
             // 
@@ -326,14 +319,71 @@
             this.Narwhal.TabIndex = 20;
             this.Narwhal.TabStop = false;
             // 
-            // display
+            // score
             // 
-            this.display.BackColor = System.Drawing.Color.Blue;
-            this.display.Location = new System.Drawing.Point(732, 0);
-            this.display.Name = "display";
-            this.display.Size = new System.Drawing.Size(258, 526);
-            this.display.TabIndex = 14;
-            this.display.TabStop = false;
+            this.score.BackColor = System.Drawing.Color.Blue;
+            this.score.Location = new System.Drawing.Point(732, 0);
+            this.score.Name = "score";
+            this.score.Size = new System.Drawing.Size(258, 526);
+            this.score.TabIndex = 14;
+            this.score.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Blue;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(798, 154);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Score";
+            // 
+            // scorelabel
+            // 
+            this.scorelabel.AutoSize = true;
+            this.scorelabel.BackColor = System.Drawing.Color.Blue;
+            this.scorelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scorelabel.Location = new System.Drawing.Point(869, 154);
+            this.scorelabel.Name = "scorelabel";
+            this.scorelabel.Size = new System.Drawing.Size(45, 20);
+            this.scorelabel.TabIndex = 47;
+            this.scorelabel.Text = "0000";
+            this.scorelabel.Click += new System.EventHandler(this.scorelabel_Click);
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(828, 445);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(75, 23);
+            this.axWindowsMediaPlayer1.TabIndex = 32;
+            this.axWindowsMediaPlayer1.Visible = false;
+            this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Blue;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(795, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 20);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Lives";
+            // 
+            // lifecount
+            // 
+            this.lifecount.AutoSize = true;
+            this.lifecount.BackColor = System.Drawing.Color.Blue;
+            this.lifecount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lifecount.Location = new System.Drawing.Point(869, 87);
+            this.lifecount.Name = "lifecount";
+            this.lifecount.Size = new System.Drawing.Size(18, 20);
+            this.lifecount.TabIndex = 49;
+            this.lifecount.Text = "3";
+            this.lifecount.Click += new System.EventHandler(this.lifecount_Click);
             // 
             // Maze
             // 
@@ -341,6 +391,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(986, 526);
+            this.Controls.Add(this.lifecount);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.scorelabel);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.fish8);
             this.Controls.Add(this.fish7);
             this.Controls.Add(this.fish5);
@@ -366,13 +420,12 @@
             this.Controls.Add(this.Wall2);
             this.Controls.Add(this.wall1);
             this.Controls.Add(this.Narwhal);
-            this.Controls.Add(this.display);
+            this.Controls.Add(this.score);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Maze";
             this.Text = "Maze";
             this.Load += new System.EventHandler(this.Maze_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fish8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fish7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fish5)).EndInit();
@@ -392,13 +445,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.Wall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wall1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Narwhal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.display)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.score)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox display;
+        private System.Windows.Forms.PictureBox score;
         private System.Windows.Forms.PictureBox Narwhal;
         private System.Windows.Forms.PictureBox wall1;
         private System.Windows.Forms.PictureBox Wall2;
@@ -424,6 +479,10 @@
         private System.Windows.Forms.PictureBox fish5;
         private System.Windows.Forms.PictureBox fish7;
         private System.Windows.Forms.PictureBox fish8;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label scorelabel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lifecount;
     }
 }
 
