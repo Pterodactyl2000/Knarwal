@@ -34,11 +34,7 @@
             this.buttonup = new System.Windows.Forms.Button();
             this.buttondown = new System.Windows.Forms.Button();
             this.buttonright = new System.Windows.Forms.Button();
-            this.fish8 = new System.Windows.Forms.PictureBox();
-            this.fish7 = new System.Windows.Forms.PictureBox();
-            this.fish5 = new System.Windows.Forms.PictureBox();
             this.fish4 = new System.Windows.Forms.PictureBox();
-            this.fish6 = new System.Windows.Forms.PictureBox();
             this.fish3 = new System.Windows.Forms.PictureBox();
             this.fish2 = new System.Windows.Forms.PictureBox();
             this.fish1 = new System.Windows.Forms.PictureBox();
@@ -56,14 +52,10 @@
             this.score = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.scorelabel = new System.Windows.Forms.Label();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.label2 = new System.Windows.Forms.Label();
             this.lifecount = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.fish8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fish7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fish5)).BeginInit();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.fish4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fish6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fish3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fish2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fish1)).BeginInit();
@@ -137,60 +129,21 @@
             this.buttonright.UseVisualStyleBackColor = true;
             this.buttonright.Click += new System.EventHandler(this.buttonright_Click);
             // 
-            // fish8
-            // 
-            this.fish8.Location = new System.Drawing.Point(47, 238);
-            this.fish8.Name = "fish8";
-            this.fish8.Size = new System.Drawing.Size(25, 26);
-            this.fish8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.fish8.TabIndex = 44;
-            this.fish8.TabStop = false;
-            this.fish8.Click += new System.EventHandler(this.fish8_Click);
-            // 
-            // fish7
-            // 
-            this.fish7.Image = global::Maze.Properties.Resources.hide;
-            this.fish7.Location = new System.Drawing.Point(176, 63);
-            this.fish7.Name = "fish7";
-            this.fish7.Size = new System.Drawing.Size(25, 26);
-            this.fish7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.fish7.TabIndex = 43;
-            this.fish7.TabStop = false;
-            // 
-            // fish5
-            // 
-            this.fish5.Image = global::Maze.Properties.Resources.hide;
-            this.fish5.Location = new System.Drawing.Point(635, 429);
-            this.fish5.Name = "fish5";
-            this.fish5.Size = new System.Drawing.Size(25, 26);
-            this.fish5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.fish5.TabIndex = 42;
-            this.fish5.TabStop = false;
-            // 
             // fish4
             // 
-            this.fish4.Image = global::Maze.Properties.Resources.hide;
-            this.fish4.Location = new System.Drawing.Point(398, 187);
+            this.fish4.BackColor = System.Drawing.Color.Transparent;
+            this.fish4.Image = global::Maze.Properties.Resources.FSH;
+            this.fish4.Location = new System.Drawing.Point(176, 63);
             this.fish4.Name = "fish4";
             this.fish4.Size = new System.Drawing.Size(25, 26);
             this.fish4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.fish4.TabIndex = 41;
+            this.fish4.TabIndex = 43;
             this.fish4.TabStop = false;
-            this.fish4.Click += new System.EventHandler(this.fish4_Click);
-            // 
-            // fish6
-            // 
-            this.fish6.Image = global::Maze.Properties.Resources.hide;
-            this.fish6.Location = new System.Drawing.Point(635, 63);
-            this.fish6.Name = "fish6";
-            this.fish6.Size = new System.Drawing.Size(25, 26);
-            this.fish6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.fish6.TabIndex = 40;
-            this.fish6.TabStop = false;
             // 
             // fish3
             // 
-            this.fish3.Image = global::Maze.Properties.Resources.hide;
+            this.fish3.BackColor = System.Drawing.Color.Transparent;
+            this.fish3.Image = global::Maze.Properties.Resources.FSH;
             this.fish3.Location = new System.Drawing.Point(166, 449);
             this.fish3.Name = "fish3";
             this.fish3.Size = new System.Drawing.Size(25, 26);
@@ -200,7 +153,8 @@
             // 
             // fish2
             // 
-            this.fish2.Image = global::Maze.Properties.Resources.hide;
+            this.fish2.BackColor = System.Drawing.Color.Transparent;
+            this.fish2.Image = global::Maze.Properties.Resources.FSH;
             this.fish2.Location = new System.Drawing.Point(293, 449);
             this.fish2.Name = "fish2";
             this.fish2.Size = new System.Drawing.Size(25, 26);
@@ -211,7 +165,8 @@
             // 
             // fish1
             // 
-            this.fish1.Image = global::Maze.Properties.Resources.hide;
+            this.fish1.BackColor = System.Drawing.Color.Transparent;
+            this.fish1.Image = global::Maze.Properties.Resources.FSH;
             this.fish1.Location = new System.Drawing.Point(521, 170);
             this.fish1.Name = "fish1";
             this.fish1.Size = new System.Drawing.Size(25, 26);
@@ -311,6 +266,7 @@
             // 
             // Narwhal
             // 
+            this.Narwhal.BackColor = System.Drawing.Color.Transparent;
             this.Narwhal.Image = global::Maze.Properties.Resources.Narwhal1;
             this.Narwhal.Location = new System.Drawing.Point(47, 41);
             this.Narwhal.Name = "Narwhal";
@@ -351,17 +307,6 @@
             this.scorelabel.Text = "0000";
             this.scorelabel.Click += new System.EventHandler(this.scorelabel_Click);
             // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(828, 445);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(75, 23);
-            this.axWindowsMediaPlayer1.TabIndex = 32;
-            this.axWindowsMediaPlayer1.Visible = false;
-            this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -385,6 +330,17 @@
             this.lifecount.Text = "3";
             this.lifecount.Click += new System.EventHandler(this.lifecount_Click);
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(828, 445);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(75, 23);
+            this.axWindowsMediaPlayer1.TabIndex = 32;
+            this.axWindowsMediaPlayer1.Visible = false;
+            this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
+            // 
             // Maze
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,11 +351,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.scorelabel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.fish8);
-            this.Controls.Add(this.fish7);
-            this.Controls.Add(this.fish5);
             this.Controls.Add(this.fish4);
-            this.Controls.Add(this.fish6);
             this.Controls.Add(this.fish3);
             this.Controls.Add(this.fish2);
             this.Controls.Add(this.fish1);
@@ -426,11 +378,7 @@
             this.Name = "Maze";
             this.Text = "Maze";
             this.Load += new System.EventHandler(this.Maze_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.fish8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fish7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fish5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fish4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fish6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fish3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fish2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fish1)).EndInit();
@@ -474,11 +422,7 @@
         private System.Windows.Forms.PictureBox fish1;
         private System.Windows.Forms.PictureBox fish2;
         private System.Windows.Forms.PictureBox fish3;
-        private System.Windows.Forms.PictureBox fish6;
         private System.Windows.Forms.PictureBox fish4;
-        private System.Windows.Forms.PictureBox fish5;
-        private System.Windows.Forms.PictureBox fish7;
-        private System.Windows.Forms.PictureBox fish8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label scorelabel;
         private System.Windows.Forms.Label label2;
